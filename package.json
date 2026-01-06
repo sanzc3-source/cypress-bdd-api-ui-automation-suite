@@ -1,0 +1,30 @@
+{
+  "name": "automationexercise-cypress-bdd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+"scripts": {
+  "ui:regression": "cypress run --spec \"cypress/e2e/ui/**/*.feature\" --browser chrome --headless --env tags=\"@ui and @regression\"",
+  "api:regression": "cypress run --spec \"cypress/e2e/api/**/*.feature\" --browser chrome --headless --env tags=\"@api and @regression\"",
+
+  "ui:smoke": "cypress run --spec \"cypress/e2e/ui/**/*.feature\" --browser chrome --headless --env tags=\"@ui and @smoke\"",
+  "api:smoke": "cypress run --spec \"cypress/e2e/api/**/*.feature\" --browser chrome --headless --env tags=\"@api and @smoke\"",
+
+  "ui:e2e": "cypress run --spec \"cypress/e2e/ui/**/*.feature\" --browser chrome --headless --env tags=\"@ui and @e2e\"",
+  "api:crud": "cypress run --spec \"cypress/e2e/api/**/*.feature\" --browser chrome --headless --env tags=\"@api and @crud\"",
+
+  "all:regression": "cypress run --spec \"cypress/e2e/**/*.feature\" --browser chrome --headless --env tags=\"@regression\"",
+  "all:smoke": "cypress run --spec \"cypress/e2e/**/*.feature\" --browser chrome --headless --env tags=\"@smoke\""
+},
+  "keywords": [],
+  "author": "Christian Sanchez",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "@deepakvishwakarma/cucumber-json-formatter": "^0.0.3",
+    "cypress": "15.8.1",
+    "esbuild": "^0.27.1"
+  }
+}

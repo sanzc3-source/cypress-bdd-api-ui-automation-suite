@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": ["cypress/page_objects/*"],
+      "@api/*": ["cypress/api_clients/*"],
+      "@utils/*": ["cypress/utils/*"],
+      "@fixtures/*": ["cypress/fixtures/*"]
+    }
+  }
+}
