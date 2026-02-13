@@ -6,7 +6,7 @@ This project demonstrates how to test **UI, API, and full end‑to‑end workflo
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 * **Cypress** 15.x (UI + API testing)
 * **Cucumber / Gherkin (BDD)** via `@badeball/cypress-cucumber-preprocessor`
@@ -17,7 +17,7 @@ This project demonstrates how to test **UI, API, and full end‑to‑end workflo
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 cypress-bdd-api-ui-automation-suite/
@@ -39,7 +39,7 @@ cypress-bdd-api-ui-automation-suite/
 
 ---
 
-## 🏷️ Tagging Strategy (CRITICAL)
+##  Tagging Strategy (CRITICAL)
 
 This framework relies on **strict tag‑based execution**. Tags are applied **at the Feature level** unless explicitly required at the Scenario level.
 
@@ -61,19 +61,19 @@ This framework relies on **strict tag‑based execution**. Tags are applied **at
 Feature: UI - Authentication
 ```
 
-> ⚠️ **Important:** Tag expressions are enforced via environment variables. Incorrect casing (e.g. `CYPRESS_tags`) will break filtering.
+>  **Important:** Tag expressions are enforced via environment variables. Incorrect casing (e.g. `CYPRESS_tags`) will break filtering.
 
 ---
 
-## 🖥️ Running Tests Locally (Node.js)
+##  Running Tests Locally (Node.js)
 
-### 1️⃣ Install Dependencies
+### 1 Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 2️⃣ Available Commands
+### 2 Available Commands
 
 #### UI Tests
 
@@ -102,23 +102,23 @@ npm run all:smoke
 
 ---
 
-## 🐳 Running Tests with Docker (Recommended)
+##  Running Tests with Docker (Recommended)
 
 Docker ensures **Linux‑consistent execution**, matching CI behavior exactly.
 
-### 1️⃣ Build the Image
+### 1 Build the Image
 
 ```bash
 docker build -t ae-cypress .
 ```
 
-### 2️⃣ Create Linux `node_modules` Volume (One‑Time)
+### 2 Create Linux `node_modules` Volume (One‑Time)
 
 ```bash
 docker volume create ae_node_modules
 ```
 
-### 3️⃣ Run UI Regression
+### 3 Run UI Regression
 
 ```bash
 docker run --rm -t \
@@ -130,7 +130,7 @@ docker run --rm -t \
   bash -lc "npm ci && npx cypress run --spec 'cypress/e2e/ui/**/*.feature' --browser chrome --headless"
 ```
 
-### 4️⃣ Run API Regression
+### 4 Run API Regression
 
 ```bash
 docker run --rm -t \
@@ -144,7 +144,7 @@ docker run --rm -t \
 
 ---
 
-## 🤖 Jenkins CI Integration
+##  Jenkins CI Integration
 
 This project is designed to run inside **Jenkins (local or cloud)**.
 
@@ -169,7 +169,7 @@ ae-nightly-regression
 
 ---
 
-## 📊 Reporting
+## Reporting
 
 * **Cucumber JSON** generated during test execution
 * **HTML reports** published automatically via Jenkins plugin
@@ -177,22 +177,22 @@ ae-nightly-regression
 
 ---
 
-## 🚫 Common Pitfalls (Read This)
+##  Common Pitfalls (Read This)
 
-❌ Mounting macOS `node_modules` into Docker (breaks esbuild)
+ Mounting macOS `node_modules` into Docker (breaks esbuild)
 
-❌ Incorrect env var casing:
+ Incorrect env var casing:
 
 ```bash
 CYPRESS_tags   # WRONG
 CYPRESS_TAGS   # CORRECT
 ```
 
-❌ Mixing UI + API tags in a single feature
+ Mixing UI + API tags in a single feature
 
 ---
 
-## 🎯 Why This Framework Matters
+##  Why This Framework Matters
 
 This repo demonstrates:
 
@@ -204,14 +204,14 @@ This repo demonstrates:
 
 ---
 
-## 👤 Author
+##  Author
 
 **Christian Sanchez**
 Senior QA Automation Engineer / SDET
 
 ---
 
-## ✅ Current Status
+##  Current Status
 
 This framework is stable and production-ready for:
 - Local execution (Node/Cypress)
@@ -219,6 +219,4 @@ This framework is stable and production-ready for:
 - Jenkins nightly execution + Cucumber reporting
 
 
-If you clone this repo and follow the steps above, you should be able to run **any subset of tests in under 5 minutes**.
-
-Happy testing 🚀
+If you clone this repo and follow the steps above, you should be able to run **any subset of tests in under 10 minutes**.
