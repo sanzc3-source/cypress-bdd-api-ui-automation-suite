@@ -10,7 +10,7 @@ This project demonstrates how to test **UI, API, and full end‑to‑end workflo
 
 This framework was **engineered using an AI-assisted workflow**, where I leveraged AI (ChatGPT) to accelerate development while maintaining full ownership of architecture, implementation, and validation.
 
-Built over ~8 days through iterative development, this project includes:
+This project includes:
 - Scalable test design using Page Object Model and Cucumber (BDD)
 - End-to-end UI + API automation with CRUD validation
 - Tag-based execution strategy for flexible test runs
