@@ -6,6 +6,21 @@ This project demonstrates how to test **UI, API, and full end‑to‑end workflo
 
 ---
 
+## AI-Assisted Development
+
+This framework was **engineered using an AI-assisted workflow**, where I leveraged AI (ChatGPT) to accelerate development while maintaining full ownership of architecture, implementation, and validation.
+
+Built over ~8 days through iterative development, this project includes:
+- Scalable test design using Page Object Model and Cucumber (BDD)
+- End-to-end UI + API automation with CRUD validation
+- Tag-based execution strategy for flexible test runs
+- Dockerized execution for environment consistency
+- Jenkins integration for CI/CD pipelines and reporting
+
+AI was used to speed up development, but all design decisions, debugging, and test validation were **driven and verified by me through real execution** — ensuring a stable, production-style automation framework.
+
+---
+
 ##  Tech Stack
 
 * **Cypress** 15.x (UI + API testing)
